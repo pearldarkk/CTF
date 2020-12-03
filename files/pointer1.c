@@ -14,7 +14,7 @@ int main(void) {
     int len = strlen(usrInp);
     if (len == 32) {
         int (*check)(char *) = check_key;
-        if (check(usrInp)) {
+        if (check(&usrInp)) {
             printf("Correct key.\n");
             printf("Flag is: ispclub{%s}\n", usrInp);
         } else
