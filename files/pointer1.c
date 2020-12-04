@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-int check_key(char *);
+int check_key_validate(char *);
 int sthIdontknow(char, char);
 
 int main(void) {
@@ -13,8 +13,8 @@ int main(void) {
 
     int len = strlen(usrInp);
     if (len == 32) {
-        int (*check)(char *) = check_key;
-        if (check(&usrInp)) {
+        int (*isValid)(char *) = check_key_validate;
+        if (isValid(&usrInp)) {
             printf("Correct key.\n");
             printf("Flag is: ispclub{%s}\n", usrInp);
         } else
@@ -26,7 +26,7 @@ int main(void) {
     return 0;
 }
 
-int check_key(char *key) {
+int check_key_validate(char *key) {
     char sth[] = "pearldarkk";
     char mySth[] = {0x45, 0xd, 0x50, 0x1c, 0x5d, 0xa, 0x46, 0x2d,
                     0x5e, 0x1f, 0x44, 0x17, 0x3e, 0x18, 0x19, 0x51,
