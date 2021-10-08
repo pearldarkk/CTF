@@ -1,0 +1,20 @@
+# openssl rsa -pubin -in key_17a08b7040db46308f8b9a19894f9f95.pem -text
+#ROCA attack 
+from Crypto.Util.number import inverse, long_to_bytes
+from Crypto.PublicKey import RSA
+from Crypto.Cipher import PKCS1_OAEP
+
+p = 77342270837753916396402614215980760127245056504361515489809293852222206596161
+q = 51894141255108267693828471848483688186015845988173648228318286999011443419469
+
+e = 65537
+c = 1917684880911867693650685352418976984109248146699653008498254042568729095851205293666079588834526955087298417903949404082481371089615961547716198943362344
+
+n = p * q
+phi = (p - 1) * (q - 1)
+d = inverse(e, phi)
+key = RSA.construct((n, e, d, p, q))
+# key = key.exportKey()
+dec = PKCS1_OAEP.new(key)
+m = dec.decrypt(long_to_bytes(c))
+print(m)

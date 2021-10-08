@@ -1,0 +1,22 @@
+flag = ''
+flag += 'Andromeda'[8]
+flag += 'Triangulum'[7]
+flag += 'Messier'[4]
+flag += 'Andromeda'[6]
+flag += 'Andromeda'[1]
+flag += 'Messier'[2]
+flag += chr(95)
+flag += 'Andromeda'[8]
+flag += 'Andromeda'[3]
+flag += 'Sombrero'[5]
+flag += chr(95)
+flag += 'Andromeda'[8]
+flag += 'Andromeda'[3]
+flag += 'Andromeda'[4]
+flag += 'Triangulum'[6]
+flag += 'Triangulum'[4]
+flag += 'Andromeda'[2]
+flag += chr(95)
+flag += 'Triangulum'[6]
+flag += 'Messier'[3]
+print(flag)
