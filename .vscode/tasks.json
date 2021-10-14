@@ -6,7 +6,7 @@
         {
             "type": "shell",
             "label": "buildC",
-            "command": "/usr/bin/gcc",
+            "command": "gcc",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
@@ -14,22 +14,18 @@
                 "-o",
                 "test"
             ],
-            "options": {
-                "cwd": "${fileDirname}"
-            },
             "problemMatcher": [
                 "$gcc"
             ],
             "group": {
                 "kind": "build",
                 "isDefault": true
-            },
-            "detail": "compiler: /usr/bin/gcc"
+            }
         },
         {
             "type": "shell",
             "label": "buildCpp",
-            "command": "/usr/bin/g++",
+            "command": "g++",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
@@ -37,14 +33,10 @@
                 "-o",
                 "test",
             ],
-            "options": {
-                "cwd": "${fileDirname}"
-            },
             "problemMatcher": [
                 "$gcc"
             ],
-            "group": "build",
-            "detail": "compiler: /usr/bin/g++"
+            "group": "build"
         },
         {
             "type": "shell",
