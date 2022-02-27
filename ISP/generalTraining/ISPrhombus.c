@@ -15,7 +15,7 @@
 
 int main() {
     // freopen("text.inp", "r", stdin);
-    //freopen("text.out", "w", stdout);
+    freopen("text.out", "w", stdout);
 
     char isp[] = {"ISP"};
     int k;

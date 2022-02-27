@@ -1,9 +1,0 @@
-version: '2'
-
-services:
-        crypto:
-                build: .
-                ports:
-                        - '2021:8080'
-                stdin_open: true
-                tty: true

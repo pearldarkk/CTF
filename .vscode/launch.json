@@ -5,6 +5,14 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Lua launch current file",
+            "type": "lua",
+            "request": "launch",
+            "stopOnEntry": true,
+            "program": "${file}",
+            //"cwd": "${workspaceFolder}"
+        },
+        {
             "name": "Python: Current File",
             "type": "python",
             "request": "launch",
@@ -16,6 +24,25 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/test",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "(gdb) Launch Windows",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/test.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
