@@ -14,4 +14,6 @@ for byte in range(256):
             key = prev[i]
         prevbyte = flag[0]
         flag = prev
-    print("".join([chr(c) for c in flag]))
+    flag = "".join([chr(c) for c in flag])
+    if "ISPCTF{" in flag:
+        print(flag)

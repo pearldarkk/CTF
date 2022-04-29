@@ -1,6 +1,5 @@
 # Source code
 crackme.cpp  
-Build with option Release under x86 Windows system
 
 
 # Writeup
@@ -36,7 +35,7 @@ As `key` always in range [0..255] (`key` type is `BYTE`):
 code: crackme.py   
 command: 
 ```
-$ python3 crackme.py | grep -a ISPCTF{
+$ python3 crackme.py 
 ```
   
 
