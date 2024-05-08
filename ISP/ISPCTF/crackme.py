@@ -17,3 +17,4 @@ for byte in range(256):
     flag = "".join([chr(c) for c in flag])
     if "ISPCTF{" in flag:
         print(flag)
+ 
